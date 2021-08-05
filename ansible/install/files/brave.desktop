@@ -1,0 +1,24 @@
+[Desktop Entry]
+Version=1.0
+Name=Brave Browser
+Exec=brave %U
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=braveicon
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
+StartupWMClass=chromium
+Actions=NewWindow;Incognito;TempProfile;
+
+[Desktop Action NewWindow]
+Exec=brave
+
+[Desktop Action Incognito]
+Name=Open a New Window in incognito mode
+Exec=brave
+
+[Desktop Action TempProfile]
+Name=Open a New Window with a temporary profile
+Exec=brave
