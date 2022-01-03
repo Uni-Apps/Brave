@@ -1,0 +1,8 @@
+---
+- name: Chromium
+  community.general.pacman:
+    name:
+      - chromium
+    state: present
+  become: true
+

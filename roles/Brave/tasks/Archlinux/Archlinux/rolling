@@ -1,0 +1,7 @@
+---
+# https://brave.com/linux/#arch
+- include_tasks: brave-bin
+  when: build_brave == false
+
+- include_tasks: build from source
+  when: build_brave == true

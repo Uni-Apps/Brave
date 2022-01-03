@@ -1,0 +1,40 @@
+---
+- name: dependencies . Brave
+  community.general.pacman:
+    name:
+      - compiler-rt
+      - clang
+      - gperf
+      - java-runtime-common
+      - libnet
+      - jre-openjdk-headless
+      - llvm
+      - c-ares
+      - nodejs
+      - nodejs-nopt
+      - semver
+      - node-gyp
+      - npm
+      - protobuf
+      - python-protobuf
+      - python2
+    state: present
+  become: true
+
+- name: AUR . dependencies
+  kewlfft.aur.aur:
+    name: ncurses5-compat-libs
+    use: yay
+    state: present
+    update_cache: yes
+  become: yes
+  become_user: aur_builder
+
+- name: Brave
+  kewlfft.aur.aur:
+    name: brave
+    use: yay
+    state: present
+  become: yes
+  become_user: aur_builder
+  

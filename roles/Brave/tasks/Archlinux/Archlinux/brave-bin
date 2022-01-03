@@ -1,0 +1,8 @@
+---
+- name: Brave
+  kewlfft.aur.aur:
+    name: brave-bin
+    use: yay
+    state: present
+  become: yes
+  become_user: aur_builder
