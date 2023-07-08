@@ -6,4 +6,4 @@
   - role: Brave
   - role: Chrome
   - role: Chromium
-#  - role: Pegasus
+  - role: Prometheus
