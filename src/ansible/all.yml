@@ -3,7 +3,7 @@
   gather_facts: yes
 
   roles:
-  - role: Brave
-  - role: Chrome
-  - role: Chromium
-  - role: Prometheus
+  - Brave
+  - Chrome
+  - Chromium
+  - Prometheus
