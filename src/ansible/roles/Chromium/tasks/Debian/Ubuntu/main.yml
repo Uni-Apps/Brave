@@ -1,0 +1,6 @@
+---
+- name: Install Chromium for Ubuntu
+  ansible.builtin.apt:
+    pkg:
+    - chromium-browser
+  become: true

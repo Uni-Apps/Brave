@@ -1,0 +1,6 @@
+---
+- name: Install Chromium for Debian
+  ansible.builtin.apt:
+    pkg:
+    - chromium
+  become: true
