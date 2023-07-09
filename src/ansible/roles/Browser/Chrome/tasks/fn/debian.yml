@@ -4,6 +4,7 @@
   ansible.builtin.apt_key:
     url: "{{ googlechrome_gpg_key }}"
     state: present
+  become: true
 
 - name: Debian/Ubuntu Family | Adding repository {{ googlechrome_repo_debian }}
   ansible.builtin.apt_repository:
@@ -11,6 +12,7 @@
     state: "{{ googlechrome_repo_desired_state }}"
     filename: "{{ googlechrome_repo_debian_filename }}"
     update_cache: yes
+  become: true
 
 - name: Debian/Ubuntu Family | Installing {{ googlechrome_app_name }}
   ansible.builtin.apt:
@@ -18,3 +20,4 @@
     state: "{{ googlechrome_desired_state }}"
     force_apt_get: yes
     update_cache: yes
+  become: true
