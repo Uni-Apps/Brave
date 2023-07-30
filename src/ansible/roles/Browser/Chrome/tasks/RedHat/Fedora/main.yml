@@ -1,0 +1,3 @@
+- name: for specific version
+  include_tasks:
+    file: fn/redhat.yml
